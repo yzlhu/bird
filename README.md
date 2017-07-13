@@ -2,4 +2,4 @@ tuzibenyue
 ==========
 玉兔吃月饼小游戏  
 原生canvas实现  
-在线demo：[http://idoube.com/proj/tuzibenyue/](http://idoube.com/proj/tuzibenyue/)
+在线demo：[https://yzlhu.github.io/bird)
