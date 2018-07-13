@@ -1,42 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
-	<meta name="screen-orientation" content="portrait">
-    <title>进击的玉兔</title>
-    <link rel="stylesheet" type="text/css" href="static/css/index.css">
-    <script src="http://s0.qhimg.com/!249ce048/WeixinApi.js" type="text/javascript" charset="utf-8"></script>
-    <script src="static/js/zepto.min.js"></script>
+    <meta charset="UTF-8">
+    <title>LOVE YOU</title>
+    <script type="text/javascript"  src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <script type="text/javascript"  src="js/bootstrap.js" ></script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-<div id="container">
-	<div id="guidePanel"></div>
-	<div id="gamepanel">
-		<div class="score-wrap">
-            <div class="heart"></div>
-            <span id="score">0</span>
+<div class="container">
+    <div class="row col-md-3"></div>
+    <div class="row col-md-6" >
+        <div class="row question">
+            <div class="col-md-6 col-xs-12">
+                <p style="line-height: 50px;font-size: 10px;">“小哥哥，我观察你很久了”</p>
+                <p style="line-height: 50px;font-size: 20px;">做我男朋友好不好？</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img src="img/01.jpg" alt="" style="height: 200px;">
+            </div>
         </div>
-		<canvas id="stage" width="320" height="568"></canvas>
-	</div>
-	<div id="gameoverPanel"></div>
-	<div id="resultPanel">
-        <div class="weixin-share"></div>
-        <a href="javascript:void(0)" class="replay"></a>
-        <div id="fenghao"></div>
-        <div id="scorecontent">
-        	您在<span id="stime" class="lighttext">2378</span>秒内抢到了<span id="sscore" class="lighttext">21341</span>个月饼<br>超过了<span id="suser" class="lighttext">31%</span>的用户！
+        <div class="row question" style="margin-top: 20px;">
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-success" style="width: 80%" id="no">好</button>
+            </div>
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-danger" style="width: 80%" id="ok">不好</button>
+            </div>
         </div>
-        <div class="textc">
-        	<span class="btn1 share">请小伙伴吃月饼</span>
+        <div class="col-md-12 col-xs-12 hide" id="success">
+            <img src="img/02.gif" alt="" style="width: 100%;">
         </div>
-	</div>
-</div>
+    </div>
 
-<script src="static/js/index.js"></script>
-<!--统计代码-->
-<script type="text/javascript" src="http://s0.qhimg.com/monitor/;monitor/445ca40a.js" ></script>
-<script type="text/javascript">monitor.setProject('360_dev').getTrack();</script>
+    <div class="row col-md-3"></div>
+
+</div>
+<script>
+    var i=1;
+    var ok=false;
+    $(document).ready(function(){
+        $("#no").click(function(){
+            alert("真的吗？你答应了？");
+            alert("给我发消息吧，爱你");
+            $(".question").addClass('hide');
+            $("#success").removeClass('hide');
+            ok=true;
+        });
+        $("#ok").click(function(){
+            switch(i){
+                case 1:
+                    alert("工资不用上交");
+                    break;
+                case 2:
+                    alert("家务全包");
+                    break;
+                case 3:
+                    alert("世界杯随便看");
+                    break;
+				case 4:
+                    alert("游戏随便玩");
+                    break;
+                case 5:
+                    alert("不跟你吵架，会撒娇 会卖萌");
+                    break;
+                default:
+                    alert("答应我吧");
+            }
+            i++;
+        });
+    });
+</script>
 </body>
 </html>
